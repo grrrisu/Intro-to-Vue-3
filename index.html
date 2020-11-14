@@ -21,6 +21,9 @@
         </div>
         <div class="product-info">
           <h1>{{ product }}</h1>
+          <p v-if="stock > 0">In Stock</p>
+          <p v-else="stock == 0">Out of Stock</p>
+          <p v-show="sale">On Sale</p>
           <p>{{ description }}</p>
           <a :href="url">Socks.com</a>
         </div>
